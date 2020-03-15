@@ -33,7 +33,7 @@ before_install:
   - >
       export PATH=$(python3 -c "import site, os; print(os.path.join(site.USER_BASE, 'bin'))"):$PATH;
       export PYTHONPATH=$(python3 -c "import site; print(site.USER_SITE)")${PYTHONPATH:+:}${PYTHONPATH};
-      easy_install3 --user pip;
+      easy_install3 --user pip==18.1;
       pip3 install --user -U setuptools
 
   - export DEVOPS_BRANCH="master"
